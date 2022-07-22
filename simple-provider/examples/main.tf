@@ -9,11 +9,7 @@ terraform {
 
 provider "simpleprovider" {}
 
-module "psl" {
-  source = "./entity"
-  entity_name = "Just sample entity name"
-}
-
-output "psl" {
-  value = module.psl.entity
+resource "simpleprovider_item" "test" {
+  name = "one"
+  description = "first"
 }

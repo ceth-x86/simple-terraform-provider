@@ -1,7 +1,7 @@
 package main
 
 import (
-	simpleprovider "simple-provider/provider"
+	"terraform-provider-example/provider"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/plugin"
@@ -10,7 +10,7 @@ import (
 func main() {
 	plugin.Serve(&plugin.ServeOpts{
 		ProviderFunc: func() *schema.Provider {
-			return simpleprovider.Provider()
+			return provider.Provider()
 		},
 	})
 }
